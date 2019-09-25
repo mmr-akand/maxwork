@@ -16,7 +16,7 @@ class Permission
      */
     public function handle($request, Closure $next)
     {
-        $user = Auth::user()->first();
+        $user = Auth::user();
 
         if ( $user->is_admin == 0) {
 
